@@ -16,8 +16,7 @@ public class CalculadoraMain {
     public static void main(String args[]){
         System.out.println("Introduce una cadena a evaluar: ");
         Scanner teclado = new Scanner(System.in);
-
-        
+        Evaluadora.evaula(teclado.nextLine());
     }
 
 }
