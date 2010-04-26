@@ -1,0 +1,7 @@
+;Libreria de operaciones para el evaluador de expresiones
+
+SUMAR	MACRO A,B
+	MOV	AX,A
+	ADD	AX,B
+
+ 
