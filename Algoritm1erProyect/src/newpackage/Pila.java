@@ -10,14 +10,14 @@ package newpackage;
  * @author arturo88
  */
 public class Pila {
-    private int [] dato;
+    private char [] dato;
     private int tope,indice;
 
 public Pila(int tamaño)
 {
     indice=0;
     tope=tamaño-1;
-    dato=new int[tamaño];
+    dato=new char[tamaño];
 }
 public boolean estaVacia()
 {
@@ -33,10 +33,10 @@ public void insertar(int elemento)
        elemento=dato[indice++];
     else System.out.println("La pila esta llena");
 }
-public int obtener()
+public char obtener()
 {
-        if(estallena())
-            return (dato[indice--]);
+        if(!estaVacia())
+            return dato[--indice];
         else
             return 1;
 }
