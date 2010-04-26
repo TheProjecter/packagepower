@@ -9,12 +9,12 @@ package newpackage;
  * @author Amnesiac
  */
 public class Nodo {
-   char info;
+   String info;
    Nodo izquierdo, derecho;
-   Nodo(char k){
+   Nodo(String k){
        this(k,null,null);
    }
-   Nodo(char k,Nodo lt,Nodo dt)
+   Nodo(String k,Nodo lt,Nodo dt)
    {
       info= k; izquierdo=lt; derecho=dt;
    }
