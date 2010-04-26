@@ -33,5 +33,13 @@ public void insertar(int elemento)
        elemento=dato[indice++];
     else System.out.println("La pila esta llena");
 }
+public int obtener()
+{
+        if(estallena())
+            return (dato[indice--]);
+        else
+            return 1;
+}
+
 }
 
