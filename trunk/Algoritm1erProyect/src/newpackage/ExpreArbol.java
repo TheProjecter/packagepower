@@ -21,5 +21,16 @@ public class ExpreArbol {
             else System.out.println("Error");
         }
     }
+Nodo term(){
+    char oper;
+    Nodo p1,p2;
+    p1=factor();
+    while(elemento=='*'||elemento='/'){
+        oper=elemento;
+        p2=factor();
+        p1=new Nodo(oper,p1,p2);
 
+    }
+    return p1;
+}
 }
