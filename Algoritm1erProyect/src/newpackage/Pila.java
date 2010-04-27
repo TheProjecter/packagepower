@@ -11,41 +11,40 @@ package newpackage;
  */
 public class Pila {
     private char [] dato;
-    private int tope,indice;
+    private int indice;
 
 public Pila(int tamaño)
 {
-    indice=0;
-    tope=tamaño;
+    indice=-1;
     dato=new char[tamaño];
 }
-public boolean estaVacia()
+public boolean isVacia()
 {
     return(indice==0);
 }
-public boolean estallena()
+public boolean isLlena()
 {
- return(indice==tope);
+ return(indice==dato.length);
 }
-public void insertar(int elemento)
+public void insertar(char elemento)
 {
-    if(!estallena())
-       elemento=dato[indice++];
+    if(!isLlena())
+      dato[indice++] = elemento;
     else System.out.println("La pila esta llena");
 }
 public char obtener()
 {
-        if(!estaVacia())
-            return dato[--indice];
+        if(!isVacia())
+            return dato[indice--];
+        else
+            return ' ';
+}
+    public char cima()
+    {
+        if(!isVacia())
+            return dato[indice-1];
         else
             return 1;
-}
-public char cima()
-{
-   if(!estaVacia())
-       return dato[indice-1];
-   else
-       return 1;
-}
+    }
 }
 
