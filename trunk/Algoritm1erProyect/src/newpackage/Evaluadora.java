@@ -7,7 +7,7 @@ package newpackage;
 class Evaluadora {
     public Evaluadora(){}
 
-    public double evalua(String ecuacion, int valor){
-        return 2.0;
+    public double evalua(String ecuacion, double valor){
+        return (Math.pow(valor,2.0));
     }
 }
