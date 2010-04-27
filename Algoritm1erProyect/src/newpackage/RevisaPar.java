@@ -9,7 +9,7 @@ package newpackage;
  * @author Amnesiac
  */
 public class RevisaPar {
-    private static boolean correcto;
+    private static boolean correcto = false;
     
     public boolean isCorrecto(){
         return correcto;
@@ -26,9 +26,9 @@ public class RevisaPar {
             if ( x == '(')
                 parentesis.insertar(x);
             else if (x == ')'){
-                if (parentesis.obtener()=='(')
-                    System.out.println(";D");
-                else{
+                if (parentesis.cima()=='(')
+                    parentesis.obtener();
+                else if (parentesis.isVacia()){
                     correcto = true;
                     break;
                 }
