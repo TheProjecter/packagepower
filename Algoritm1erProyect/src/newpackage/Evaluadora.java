@@ -10,7 +10,7 @@ package newpackage;
  */
 public class Evaluadora {
 
-    public static Double evaula(String ecuacion){
+    public static Double evalua(String ecuacion){
 
         if (AnalizaSintax.analizadora(ecuacion))
             return 2.0;
