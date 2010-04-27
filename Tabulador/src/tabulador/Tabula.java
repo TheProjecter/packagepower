@@ -15,7 +15,7 @@ public class Tabula {
     {
         EvaluadorDePrubeba k= new EvaluadorDePrubeba();
         for(float i=min; i<=may ; i++){
-            System.out.print("\n\tF(x):" +k.evalua(i));
+            System.out.print("\tF("+i+"):" +k.evalua(i)+"\n");
         }
     }
 
