@@ -16,7 +16,7 @@ public class Pila {
 public Pila(int tamaño)
 {
     indice=0;
-    tope=tamaño-1;
+    tope=tamaño;
     dato=new char[tamaño];
 }
 public boolean estaVacia()
@@ -29,7 +29,7 @@ public boolean estallena()
 }
 public void insertar(int elemento)
 {
-    if(estaVacia())
+    if(!estallena())
        elemento=dato[indice++];
     else System.out.println("La pila esta llena");
 }
@@ -40,6 +40,12 @@ public char obtener()
         else
             return 1;
 }
-
+public char cima()
+{
+   if(!estaVacia())
+       return dato[indice-1];
+   else
+       return 1;
+}
 }
 
