@@ -1,20 +1,13 @@
-/*
- * aqui hacemos el desmadre de tanto evaluar la sintaxis, la expresion y obtener un resultado
- */
-
 package newpackage;
 
 /**
- * clase que recibe maneja la expresion
+ *
  * @author Amnesiac
  */
-public class Evaluadora {
+class Evaluadora {
+    public Evaluadora(){}
 
-    public static Double evalua(String ecuacion){
-
-        if (AnalizaSintax.analizadora(ecuacion))
-            return 2.0;
-        return null;
+    public double evalua(String ecuacion, int valor){
+        return 2.0;
     }
-
 }
