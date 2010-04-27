@@ -46,5 +46,8 @@ public char obtener()
         else
             return 1;
     }
+    public int getIndice(){
+        return indice;
+    }
 }
 
