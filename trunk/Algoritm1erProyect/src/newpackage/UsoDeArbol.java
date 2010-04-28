@@ -36,7 +36,9 @@ public void insertar(String Info, Nodo izq, Nodo der, Nodo root)
         }else
             insertar(Info,izq,der,root);//Si no es ninguno de los dos anteriores, que vuelva a ejecutar recursivamente el mismo metodo para volver a buscar
 }
-    public String postorden(Nodo p)
+
+//Este es el recursivo
+public String postorden(Nodo p)
     {
         if(p==null)
             return null ;
@@ -44,6 +46,25 @@ public void insertar(String Info, Nodo izq, Nodo der, Nodo root)
        postorden(p.der);
        return p.info;
     }
+//Este es el no recursv o
+public void postorden()
+{
+    Nodo p=raiz, q=raiz;
+    Stack pila = new Stack();
+    while (p!=null){
+        for(; p.izq!=null;p = p.izq)
+            pila.push(p);
+        while(p! = null && (p.der==null || p.der==q)){
+            visi(p); //Este solo imprime la info del nodo
+            q=p;
+            if(pila.isEmpty())
+                return;
+            p=(Nodo)pila.pop();
+        }
+        pila.push(p);
+        p=p.der;
+    }
+}
 
     //INSERTAR AQUI LOS METODOS PROGRAMADOS EN EL CONSTRUCTOR PARA ASIGNAR ESOS VALORES A CADA ATRIBUTO, PERO DESDE AQUI.
     
