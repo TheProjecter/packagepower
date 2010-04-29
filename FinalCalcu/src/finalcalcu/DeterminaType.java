@@ -36,16 +36,5 @@ public class DeterminaType {
     public static double numerico(String numero){
         return new Double(numero);
     }
-
-    public static void main(String args[]){
-        System.out.println("introduce algoo! ");
-        int op = obtieneTipo(new String(new Scanner(System.in).nextLine()));
-        if( op == 2 )
-            System.out.println("se introdujo un operando");
-        else if (op == 1)
-            System.out.println("se introdujo un operador");
-        else
-            System.out.println("no se sabe que es la cadena D:");
-    }
 }
 
