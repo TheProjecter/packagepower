@@ -46,19 +46,12 @@ public class Analiza {
     {
 
         elemento= new StringTokenizer(expresion);
-
+        evaluador pene = new evaluador();
         while (elemento.hasMoreTokens()) {
             String str = elemento.nextToken();
-            int op = DeterminaType.obtieneTipo(str);
-            if(op==1) {
-                System.out.println("operador ");
+             pene.evaluar(str);
             }
-            else if(op == 2){
-                System.out.println("operando ");
-            }
-            else System.out.println("null ");
-            }
-
+        System.out.println("el resultado es " + pene.getRes());
     }
 
     public void MeterArbol(double elemento)
