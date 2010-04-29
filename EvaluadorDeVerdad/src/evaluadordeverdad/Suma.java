@@ -16,7 +16,7 @@ public class Suma
 
         try
         {
-            System.out.print("Sumando 1 : ");
+            System.out.print("Ingrese la expresion separada por espacios \n Ejemplo: 3 + 4 : ");
             String Expresion =(br.readLine());
          //  analiza.checaPar(Expresion);
             analiza.Analiza(Expresion);
