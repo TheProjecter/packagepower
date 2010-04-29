@@ -16,20 +16,15 @@ private Nodo raiz;
  }
  public void insertar(String inf)
  {
-    Nodo p= raiz, prev=null;
-    if(DeterminaType.obtieneTipo(inf)== 2)
-        p.info=inf;
+     if (raiz.info == null){
+         raiz.info = inf;
+     }
+     else if ((DeterminaType.obtieneTipo((raiz.info))) == 1 && (DeterminaType.obtieneTipo(inf))== 2){
+         Nodo tmp = raiz;
+         raiz = new Nodo(inf);
+         raiz.izquierdo = tmp;
 
-    else if(DeterminaType.obtieneTipo(inf)== 1){
-
-        if(p.izquierdo==null){
-           prev=p.izquierdo;
-           prev.info=inf;}
-        else
-           prev=p.derecho;
-           prev.info=inf;
-
- }     
+     }
  }
   public void postorden()
  {
