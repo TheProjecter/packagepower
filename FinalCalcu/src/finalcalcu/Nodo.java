@@ -14,12 +14,12 @@ public class Nodo {
     int tipo;
     Nodo izquierdo,derecho,padre;
 
-    public Nodo(String inf, int tip){
-        this(inf,null,null,tip);
+    public Nodo(String inf){
+        this(inf,null,null);
     }
-    public Nodo(String inf,Nodo izq, Nodo der, int tip)
+    public Nodo(String inf,Nodo izq, Nodo der)
     {
-        tipo = tip; info= new String(inf); izquierdo=izq; derecho=der;
+        info= new String(inf); izquierdo=izq; derecho=der;
     }
 
 }
