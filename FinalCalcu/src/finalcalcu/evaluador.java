@@ -13,9 +13,12 @@ import java.util.Stack;
  */
 public class evaluador
 {
-    String elemento;
-    double val1,val2;
-
+    private Stack<String> operando = new Stack<String>();
+    private String elemento;
+    private double val1,val2;
+    public String getRes(){
+        return operando.lastElement();
+    }
     public double operaciones(double Operando1, double Operando2, String Operador)
     {
 
@@ -33,9 +36,6 @@ public class evaluador
 
     public void evaluar(String elem)
     {
-
-        Stack<String> operando = new Stack<String>();
-
         if (DeterminaType.obtieneTipo(elem)==2)
             operando.push(elem);
         else if(DeterminaType.obtieneTipo(elem)==1)
@@ -45,4 +45,5 @@ public class evaluador
             operando.push(String.valueOf(operaciones(val1,val2,elem)));
         }
     }
+
 }
