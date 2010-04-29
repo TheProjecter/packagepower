@@ -51,10 +51,10 @@ public class Analiza {
 
     }
 
-    public void MeterArbol(String expresion)
+    public void MeterArbol(String elemento)
     {
-        
-
+        arbolin.insertar(elemento);
+        arbolin.postorden();
     }
 
 
