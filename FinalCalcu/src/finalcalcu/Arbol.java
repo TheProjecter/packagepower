@@ -5,9 +5,7 @@
 
 package finalcalcu;
 import java.util.Stack;
-/**
- *
- * @author arturo88
+/* @author arturo88
  */
 public class Arbol {
 private Nodo raiz;
@@ -30,7 +28,9 @@ public void insertar(String inf)
         }
         else if(raiz!=null && DeterminaType.obtieneTipo(inf)==2)
             raiz.derecho = new Nodo(inf);
-        }
+
+        else System.out.println("ERROR FATAL");
+    }
 
 }
  
@@ -56,7 +56,19 @@ public void insertar(String inf)
   {
       System.out.println(p + "");
   }
+public static void main (String arg[]){
+    Arbol arbolin = new Arbol();
+    String aux1 = "5";
+    String aux2 = "+";
+    String aux3 = "3";
+    String aux4 = "-";
+
+    arbolin.insertar(aux1);
+    arbolin.insertar(aux2);
+    arbolin.insertar(aux3);
+    arbolin.insertar(aux4);
+    arbolin.postorden();
+
 }
 
- 
- 
+}
