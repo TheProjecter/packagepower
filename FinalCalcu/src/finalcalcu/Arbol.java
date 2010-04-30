@@ -11,22 +11,30 @@ import java.util.Stack;
  */
 public class Arbol {
 private Nodo raiz;
- public Arbol(){
+
+public Arbol(){
      raiz=null;
  }
- public void insertar(String inf)
- {
-     if (raiz.info == null){
-         raiz.info = inf;
-     }
-     else if ((DeterminaType.obtieneTipo((raiz.info))) == 1 && (DeterminaType.obtieneTipo(inf))== 2){
-         Nodo tmp = raiz;
-         raiz = new Nodo(inf);
-         raiz.izquierdo = tmp;
+public void insertar(String inf)
+{
 
-     }
- }
-  public void postorden()
+    if(raiz==null){
+        if(DeterminaType.obtieneTipo(inf)==2)
+            raiz=new Nodo(inf);
+    }
+    else{
+        if(raiz!=null && DeterminaType.obtieneTipo(inf)==1){
+            Nodo temp = raiz;
+            raiz = new Nodo(inf);
+            raiz.izquierdo = temp;
+        }
+        else if(raiz!=null && DeterminaType.obtieneTipo(inf)==2)
+            raiz.derecho = new Nodo(inf);
+        }
+
+}
+ 
+ public void postorden()
  {
      Nodo p=raiz, q=raiz;
      Stack pila = new Stack ();
@@ -34,7 +42,7 @@ private Nodo raiz;
          for(; p.izquierdo!=null;p=p.izquierdo)
              pila.push(p);
          while(p!=null && (p.derecho==null || p.derecho==q)){
-             visitar(p);
+             visitar(p.info);
              q=p;
              if(pila.isEmpty())
                  return;
@@ -44,8 +52,11 @@ private Nodo raiz;
          p=p.derecho;
      }
   }
-  public void visitar(Nodo p)
+  public void visitar(String p)
   {
       System.out.println(p + "");
   }
 }
+
+ 
+ 
