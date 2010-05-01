@@ -26,10 +26,4 @@ public class Polacalizadora {
         polaco.postorden();
         return polaco.getPostordenada();
     }
-
-    public static void main(String args[]){
-        System.out.print(Polacalizadora.polaca("3 + 5"));
-
-    }
-
 }
