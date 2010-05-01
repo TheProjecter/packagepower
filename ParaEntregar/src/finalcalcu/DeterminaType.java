@@ -9,7 +9,7 @@ import java.util.regex.*;
 /**
  * Si regresa 1 es un operador
  *            2 es operando
- * @author Administrador
+ * @author Amnesiac
  */
 public class DeterminaType {
     public static int obtieneTipo(String entrada){

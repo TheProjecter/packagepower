@@ -5,7 +5,7 @@
 
 package finalcalcu;
 import java.util.Stack;
-/* @author arturo88
+/* @author amnesiac
  */
 public class Arbol {
 private Nodo raiz;

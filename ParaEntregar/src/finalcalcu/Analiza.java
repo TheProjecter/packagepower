@@ -6,7 +6,6 @@
 package finalcalcu;
 
 import java.util.StringTokenizer;
-import java.util.Stack;
 
 /**
  *
@@ -14,34 +13,7 @@ import java.util.Stack;
  */
 public class Analiza {
     private StringTokenizer elemento;
-    private static boolean correcto=false;
 
-    /*  public boolean isCorrecto(){
-        return correcto;
-    }
-
-    public void setCorrecto(boolean titi){
-        correcto = titi;
-    }*/
-
-
- /*public void checaPar(String expresion )
-    {
-      Stack <char> parentesis = new <char>  Stack();
-      for(int i = 0; i<= expresion.length();i++)
-      {
-          char x = expresion.charAt(i);
-          if(x=='(')
-              parentesis.push(x);
-          else if(x==')')
-              if(parentesis.lastElement()=='(')
-                  parentesis.pop();
-              else if(parentesis.isEmpty())
-                  correcto=true;
-                  break;
-      }
-    }
-   */
     public Analiza(String expresion)
     {
 
@@ -53,11 +25,4 @@ public class Analiza {
             }
         System.out.println("el resultado es " + pene.getRes());
     }
-
-    public void MeterArbol(double elemento)
-    {
-
-    }
-
-
 }

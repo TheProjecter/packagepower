@@ -5,6 +5,7 @@
 
 package finalcalcu;
 import java.io.*;
+import java.util.Scanner;
 
 /**
  * Aqui se ejecuta el programa
@@ -17,9 +18,16 @@ public class Main {
 
         try
         {
-            System.out.print("Ingrese la expresion separada por espacios \n Ejemplo: 3 + 4 : ");
+            System.out.print("Ingrese la expresion separada por espacios \n Ejemplo: X + 4 : ");
             String Expresion =(br.readLine());
-            new Analiza(Polacalizadora.polaca(Expresion));
+            System.out.println("Introduce el primer valor de x:");
+            double inferior = (new Scanner(System.in)).nextDouble();
+            System.out.println("Introduce el ultimo valor de x:");
+            double superior = (new Scanner(System.in)).nextDouble();
+            System.out.println("Introduce el incremento de x:");
+            double incremento = (new Scanner(System.in)).nextDouble();
+            Tabulador T = new Tabulador();
+            T.tabula(inferior,superior,incremento,Expresion);
 
 
         }
