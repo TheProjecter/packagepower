@@ -19,7 +19,7 @@ public class Main {
         {
             System.out.print("Ingrese la expresion separada por espacios \n Ejemplo: 3 + 4 : ");
             String Expresion =(br.readLine());
-            new Analiza(Expresion); 
+            new Analiza(Polacalizadora.polaca(Expresion));
 
 
         }
