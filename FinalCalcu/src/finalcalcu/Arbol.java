@@ -9,6 +9,7 @@ import java.util.Stack;
  */
 public class Arbol {
 private Nodo raiz;
+private String postordenada = new String("");
 
 public Arbol(){
      raiz=null;
@@ -37,6 +38,7 @@ public void insertar(String inf)
  public void postorden()
  {
      Nodo p=raiz, q=raiz;
+     
      Stack pila = new Stack ();
      while(p!=null){
          for(; p.izquierdo!=null;p=p.izquierdo)
@@ -54,21 +56,11 @@ public void insertar(String inf)
   }
   public void visitar(String p)
   {
-      System.out.println(p + "");
+      postordenada = postordenada + p + " ";
   }
-public static void main (String arg[]){
-    Arbol arbolin = new Arbol();
-    String aux1 = "5";
-    String aux2 = "+";
-    String aux3 = "3";
-    String aux4 = "-";
 
-    arbolin.insertar(aux1);
-    arbolin.insertar(aux2);
-    arbolin.insertar(aux3);
-    arbolin.insertar(aux4);
-    arbolin.postorden();
-
-}
+  public String getPostordenada(){
+      return postordenada;
+  }
 
 }
