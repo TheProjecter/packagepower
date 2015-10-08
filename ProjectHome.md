@@ -1,0 +1,1 @@
+Para no tener que reuinirnos para programar, mejor todo lo subimos a un repositorio de subversion... en este caso, proporcionado por google... y pues ahi vamos :D
